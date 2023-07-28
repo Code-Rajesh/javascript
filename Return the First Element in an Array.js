@@ -6,9 +6,15 @@
 
 // console.log("retrun first element of array is =",firstarray[1]);
  
-let newarr =[1,2,3,4];
-function getFirstValue(arr) {
-	return newarr[arr];
-}
+// let newarr =[1,2,3,4];
+// function getFirstValue(arr) {
+// 	return newarr[arr];
+// }
 
-console.log(getFirstValue(1));
+// console.log(getFirstValue(1));
+
+let arrayretrun = a=>a[0];
+
+let newarr=arrayretrun([1,2,3,4]);
+
+console.log(newarr);
