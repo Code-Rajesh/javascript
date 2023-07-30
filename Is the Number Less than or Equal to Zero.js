@@ -12,8 +12,8 @@ return "false";
 
 console.log(check(5));
 
-// with arrow if and else
+// // with arrow if and else
 
-let check = a=> (a<=0)?"true":"false";
+// let check = a=> (a<=0)?"true":"false";
 
-console.log(check(5));
+// console.log(check(5));
