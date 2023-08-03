@@ -17,14 +17,22 @@ const dayname = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","S
 
 document.getElementById('day').innerHTML = "Today Is "+ ":"+dayname[day]+".";
 
-if(hr>=12){
-    document.getElementById('time').innerHTML="Current Time Is"+":"+ (hr-12)+"  "+"PM"+"  "+":"+"  "+min+"  "+":"+"  "+sec;
+if(hr>=12 && hr<=15){
+    document.getElementById('time').innerHTML="Current Time Is"+":"+ (hr-12)+"  "+"PM NOON"+"  "+":"+"  "+min+"  "+":"+"  "+sec;
+}
+else if(hr>=15 && hr<=20) {
+    document.getElementById('time').innerHTML="Current Time Is"+":"+ (hr-12)+"  "+"PM EVENING"+"  "+":"+"  "+min+"  "+":"+"  "+sec;
 }
 
-else
+else if(hr>=20 && hr<=24)
 {
-    document.getElementById('time').innerHTML="Current Time Is"+":"+ hr+"  "+"AM"+"  "+":"+"  "+min+"  "+":"+"  "+sec;
+    document.getElementById('time').innerHTML="Current Time Is"+":"+ (hr-12)+"  "+"PM NIGHT"+"  "+":"+"  "+min+"  "+":"+"  "+sec;
+    
+}
+else if(hr==24){
+    document.getElementById('time').innerHTML="Current Time Is"+":"+ hr+"  "+"MIDNIGHT"+"  "+":"+"  "+min+"  "+":"+"  "+sec;
 }
 
-
-
+else{
+document.getElementById('time').innerHTML="Current Time Is"+":"+ hr+"  "+"AM"+"  "+":"+"  "+min+"  "+":"+"  "+sec;
+}
