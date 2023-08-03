@@ -3,4 +3,28 @@
 // // Current time is : 10 PM : 30 : 38
 
 const todaydate = new Date();
-document.getElementById("date").innerHTML = todaydate;
+
+
+const day = todaydate.getDay();
+
+const hr = todaydate.getHours();
+const min= todaydate.getMinutes();
+const sec = todaydate.getSeconds();
+
+const dayname = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+
+
+
+document.getElementById('day').innerHTML = "Today Is "+ ":"+dayname[day]+".";
+
+if(hr>=12){
+    document.getElementById('time').innerHTML="Current Time Is"+":"+ (hr-12)+"  "+"PM"+"  "+":"+"  "+min+"  "+":"+"  "+sec;
+}
+
+else
+{
+    document.getElementById('time').innerHTML="Current Time Is"+":"+ hr+"  "+"AM"+"  "+":"+"  "+min+"  "+":"+"  "+sec;
+}
+
+
+
